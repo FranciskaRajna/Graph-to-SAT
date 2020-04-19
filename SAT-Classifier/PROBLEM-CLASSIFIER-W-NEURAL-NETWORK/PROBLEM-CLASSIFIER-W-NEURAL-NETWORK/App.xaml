@@ -1,0 +1,28 @@
+﻿<Application x:Class="PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PROBLEM_CLASSIFIER_W_NEURAL_NETWORK"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Color x:Key="DarkBackgroundColor" A="255" R="30" G="30" B="30"/>
+        <Color x:Key="LightBackgroundColor" A="255" R="50" G="50" B="50"/>
+        <Color x:Key="LightForegroundColor" A="255" R="255" G="255" B="255"/>
+        <Color x:Key="ErrorColor" A="255" R="255" G="0" B="50"/>
+        <Color x:Key="OkColor" A="255" R="0" G="255" B="50"/>
+        <Color x:Key="LinkColor" A="255" R="0" G="0" B="255"/>
+        <Color x:Key="LinkMouseOver" A="255" R="255" G="201" B="14"/>
+        <Color x:Key="HighlighterColor" A="255" R="88" G="142" B="74" />
+        <Color x:Key="DarkBackgroudColor_2" A="255" R="37" G="36" B="36" />
+
+        <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource DarkBackgroundColor}"/>
+        <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource LightBackgroundColor}"/>
+        <SolidColorBrush x:Key="LightForegroundBrush" Color="{StaticResource LightForegroundColor}"/>
+        <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}"/>
+        <SolidColorBrush x:Key="OkBrush" Color="{StaticResource OkColor}"/>
+        <SolidColorBrush x:Key="LinkBrush" Color="{StaticResource LinkColor}"/>
+        <SolidColorBrush x:Key="HightlighterBrush" Color="{StaticResource HighlighterColor}" />
+        <SolidColorBrush x:Key="DefaultHighlightingBrush" Color="Gray" />
+        <SolidColorBrush x:Key="LinkMouseOverBrush" Color="{StaticResource LinkMouseOver}" />
+        <SolidColorBrush x:Key="MoreViewBackBrush" Color="{StaticResource DarkBackgroudColor_2}" />
+    </Application.Resources>
+</Application>

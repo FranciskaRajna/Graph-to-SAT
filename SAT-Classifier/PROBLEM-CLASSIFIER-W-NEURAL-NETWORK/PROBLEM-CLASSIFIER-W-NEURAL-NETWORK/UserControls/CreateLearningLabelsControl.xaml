@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.UserControls.CreateLearningLabelsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Create Learning Labels" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontWeight="Bold" FontSize="22"/>
+
+        <TextBox x:Name="tb_label" Grid.Row="1" Grid.Column="0" MaxWidth="200" MinWidth="50" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <Button x:Name="btn_addLabel" Content="Add" Grid.Row="1" Grid.Column="1" MinWidth="50" MaxWidth="200" VerticalAlignment="Center" HorizontalAlignment="Left" Click="btn_addLabel_Click"/>
+        <ScrollViewer Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20" HorizontalAlignment="Left" Background="{DynamicResource LightBackgroundBrush}" >
+                <ItemsControl x:Name="wp_labels">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

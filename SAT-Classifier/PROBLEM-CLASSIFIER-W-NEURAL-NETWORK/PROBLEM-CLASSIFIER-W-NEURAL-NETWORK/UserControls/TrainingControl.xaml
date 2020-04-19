@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.UserControls.TrainingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Training" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontWeight="Bold" FontSize="22"/>
+
+        <Label Content="Training sets:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Foreground="{DynamicResource LightForegroundBrush}"/>
+        <TextBox x:Name="tb_trainingSets" Grid.Row="1" Grid.Column="1" MaxHeight="30" Margin="10,5,10,5" IsReadOnly="True"/>
+        <Button x:Name="btn_trainingSetsBrowse" Content="..." Width="40" Height="30" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Click="btn_trainingSetsBrowse_Click"/>
+
+        <Label Content="NeuralNetwork" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Foreground="{DynamicResource LightForegroundBrush}" />
+        <TextBox x:Name="tb_neuralNetwork" Grid.Row="3" Grid.Column="1" MaxHeight="30" Margin="10,5,10,5" IsReadOnly="True"/>
+        <Button x:Name="btn_neuralNetworkBrowse" Content="..." Width="40" Height="30" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Click="btn_neuralNetworkBrowse_Click"/>
+
+        <Label Content="Reps:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Foreground="{DynamicResource LightForegroundBrush}" />
+        <TextBox x:Name="tb_reps" Grid.Row="2" Grid.Column="1" MaxHeight="30" Margin="10,5,10,5" />
+
+        <Button x:Name="btn_start" Content="Start" Grid.Row="4" Grid.ColumnSpan="3" Width="100" Height="50" Margin="0,0,110,0" Click="btn_start_Click"/>
+        <Button x:Name="btn_saveNetwork" Content="Save network" Grid.Row="4" Grid.ColumnSpan="3" Width="100" Height="50" Margin="110,0,0,0" IsEnabled="False" Click="btn_saveNetwork_Click"/>
+
+        <RichTextBox x:Name="rtb_log" Grid.Row="5" Grid.ColumnSpan="3" Margin="30,10" IsReadOnly="True"/>
+        <ProgressBar x:Name="pb_training" Grid.Row="6" Grid.ColumnSpan="3" Height="30" VerticalAlignment="Top" Margin="30,10"/>
+    </Grid>
+
+</UserControl>

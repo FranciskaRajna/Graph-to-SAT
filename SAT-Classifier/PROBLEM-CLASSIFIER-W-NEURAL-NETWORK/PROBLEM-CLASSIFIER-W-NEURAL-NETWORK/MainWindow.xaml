@@ -1,0 +1,31 @@
+﻿<Window x:Class="PROBLEM_CLASSIFIER_W_NEURAL_NETWORK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROBLEM_CLASSIFIER_W_NEURAL_NETWORK"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn_learningLabels" Content="Create Learning Labels" Grid.Row="0" Grid.Column="0" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_learningLabels_Click"/>
+        <Button x:Name="btn_learningSet" Content="Create Learning Set" Grid.Row="1" Grid.Column="0" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_learningSet_Click"/>
+        <Button x:Name="btn_makeNeuralNetwork" Content="Make Neural Network" Grid.Row="2" Grid.Column="0" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_makeNeuralNetwork_Click"/>
+        <Button x:Name="btn_training" Content="Training" Grid.Row="3" Grid.Column="0" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_training_Click"/>
+        <Button x:Name="btn_testing" Content="Testing" Grid.Row="4" Grid.Column="0" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_testing_Click"/>
+        <UserControl x:Name="userControlHolder" Grid.Row="0" Grid.Column="1" Grid.RowSpan="7" Background="{DynamicResource DarkBackgroundBrush}"  />
+    </Grid>
+</Window>
